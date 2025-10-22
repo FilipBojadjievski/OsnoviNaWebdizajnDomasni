@@ -1,0 +1,55 @@
+body section p.entry {
+  font-weight: bold;
+  font-family: "Times New Roman", Times, serif;
+  padding: 1%;
+  border-width: 1%;
+  border-color: red;
+  border-style: dashed;
+  font-style: italic;
+  text-indent: 2%;
+}
+section img {
+  padding: 1%;
+  border-width: 3%;
+  border-color: white;
+  border-style: dotted;
+  background-color: #da291c;
+  float: right;
+  margin-top: 0%;
+  margin-right: 0%;
+}
+section img:hover {
+  padding: 3%;
+  scale: 130%;
+  border-width: 10%;
+  border-color: white;
+  border-style: dashed;
+  background-color: #da291c;
+  float: right;
+  margin-right: 2%;
+  margin-top: 2%;
+}
+select {
+  font-weight: lighter;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+  padding: 1%;
+  border-width: thick;
+  background-color:#e3cc33;
+  border-color: #da291c;
+  border-style: outset;
+  font-style: italic;
+}
+button{
+background-color: #da291c;
+color:white;
+font-size: 100%;
+border-radius: 40%;
+padding: 1%;
+margin-left: 20%;
+font-family: Arial, Helvetica, sans-serif;
+font-style: italic;
+}
+button:hover{
+    background-color: white;
+    color:#da291c;
+}
