@@ -11,10 +11,53 @@ function init() {
   but.addEventListener("click", comment, true);
   but = document.getElementById("3");
   but.addEventListener("click", comment, true);
-  but = document.getElementById("Like 1");
-  but.addEventListener("click", like, true);
-  but = document.getElementById("Dislike 1");
-  but.addEventListener("click", comment, true);
+  but = document.getElementById("PostButton");
+  but.addEventListener("click", post, true);
+}
+function timestamp() {
+  const now = new Date();
+  return `${now.getDate()}.${now.getMonth()}.${now.getFullYear()} ${now.getHours()}:${parseInt(
+    now.getMinutes() / 10
+  )}${now.getMinutes() % 10}`;
+}
+function post(event) {
+  var referenced = event.target;
+  var accessedbox = document.getElementById("PostArea");
+  var commentsList = document.getElementById("blogPost");
+  var title = document.getElementById("PostTitle");
+  if (title.value == "") {
+    title.value = "Please write a title";
+    return;
+  }
+  console.log(commentsList);
+  if (accessedbox.value == "") {
+    accessedbox.value = "Please write a post";
+    return;
+  }
+  var nov = document.createElement("li");
+  var korisnik = document.createElement("img");
+  korisnik.src = "user.png";
+  korisnik.setAttribute("style", "border-radius: 100%; max-height: 25px;");
+  nov.appendChild(korisnik);
+  var komentar = document.createElement("div");
+  const now = new Date();
+  komentar.setAttribute("style", "display:inline");
+  var tekst = `<b>${ime} posted on  ${timestamp()}:</b> \n`;
+  commentsList.appendChild(nov);
+  komentar.innerHTML = tekst + `<h1>${title.value}</h1>` + accessedbox.value;
+  var brisi = document.createElement("button");
+  brisi.id = "delete " + referenced.id;
+  brisi.setAttribute("class", "deleteButton");
+  brisi.innerHTML = "X";
+  brisi.addEventListener("click", deletepost, true);
+  komentar.appendChild(brisi);
+  nov.appendChild(komentar);
+  accessedbox.value = "";
+}
+function deletepost(event) {
+  var current = event.target;
+  var todel = current.parentElement.parentElement;
+  todel.parentElement.removeChild(todel);
 }
 function like(event) {
   var referenced = event.target;
@@ -35,9 +78,9 @@ function comment(event) {
   korisnik.setAttribute("style", "border-radius: 100%; max-height: 25px;");
   nov.appendChild(korisnik);
   var komentar = document.createElement("div");
-  const now = new Date();
+
   komentar.setAttribute("style", "display:inline");
-  var tekst = `<b>${ime} commented on  ${now.getDate()}.${now.getMonth()}.${now.getFullYear()} ${now.getHours()}:${now.getMinutes()}:</b>`;
+  var tekst = `<b>${ime} commented on  ${timestamp()}:</b> \n`;
   console.log(tekst);
   commentsList.appendChild(nov);
   komentar.innerHTML = tekst + accessedbox.value;

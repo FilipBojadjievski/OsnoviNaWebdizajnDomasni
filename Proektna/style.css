@@ -28,18 +28,21 @@ header button:hover {
   max-height: 25px;
 }
 .Gallery {
-  background-color: rgb(169, 222, 222);
+  background: linear-gradient(to bottom, rgb(169, 222, 222), rgb(28, 96, 118));
+
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   text-align: center;
   margin-top: 0;
   padding-top: 10%;
+  padding-bottom: 10%;
 }
 .Gallery ul {
   justify-content: center;
   align-items: center;
 }
+
 .image {
   background-color: lightgray;
   max-width: 40%;
@@ -90,6 +93,79 @@ header button:hover {
   margin-right: auto;
   align-items: center;
   justify-content: center;
+}
+
+.Blog {
+  background-color: rgb(209, 159, 88);
+  max-width: 75%;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  margin-top: 10%;
+  margin-bottom: 10%;
+  border-radius: 5%;
+  padding: 3%;
+  text-align: left;
+  margin-left: auto;
+  margin-right: auto;
+}
+.Blog-bg {
+  background: linear-gradient(to bottom, rgb(28, 96, 118), rgb(30, 111, 64));
+  margin-top: 0;
+  padding-top: 10%;
+  padding-bottom: 10%;
+}
+.Blog h2 {
+  color: rgb(101, 76, 42);
+}
+.Blog h1 {
+  color: rgb(66, 50, 28);
+}
+.Blog h3 {
+  color: rgb(66, 50, 28);
+}
+.Blog textarea {
+  width: 100%;
+  height: 60%;
+}
+.blog_posts {
+  list-style: none;
+}
+.Blog button {
+  background-color: rgb(99, 75, 42);
+  color: white;
+  border-radius: 5%;
+  margin-top: 5%;
+}
+.Blog button:hover {
+  background-color: rgb(217, 165, 93);
+  color: black;
+}
+.blog_posts li .deleteButton {
+  background-color: rgb(170, 100, 46);
+  color: white;
+  border-radius: 5%;
+  margin-top: 5%;
+  height: 10 px;
+  width: 10 px;
+  display: block;
+  margin-left: 5%;
+
+  margin-left: 0%;
+}
+.Blog .deleteButton:hover {
+  background-color: rgb(204, 199, 199);
+  color: black;
+}
+.Blog input {
+  width: 100%;
+  margin-bottom: 5%;
+}
+.blog_posts li {
+  margin: 3%;
+  padding-left: 2%;
+  border-style: dashed;
+  border-color: black;
+  border-width: 1%;
 }
 header h1 {
   color: white;

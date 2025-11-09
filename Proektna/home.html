@@ -21,7 +21,7 @@
             <ul>
               <li><a href="home.html#top">Home</a></li>
               <li><a href="#Gallery">Gallery</a></li>
-              <li><a href="Blog.html#top">Blog</a></li>
+              <li><a href="#Blog">Blog</a></li>
               <li><a href="Feedback.html#top">Feedback</a></li>
             </ul>
           </nav>
@@ -88,22 +88,35 @@
 
           </ul>
           <h2>Comments</h2>
+
           <textarea id="Comment area 3"></textarea>
           <button id="3">Comment</button>
         </div>
 
     </div>
   </div>
-    <div class="container-fluid pr-0 pl-0">
+  <div class="container-fluid pr-0 pl-0">
+    <div class="Blog-bg">
     <div class="Blog" id="Blog">
       <h1>Blog</h1>
       <p>Here you can read articles about the city or add your own.</p>
-          <h2>Posts</h2>
-          <textarea id="Comment area 1"></textarea>
-          <button id="1">Comment</button>
-      <ul>
+      <h2>Add your own post</h2>
+      <h3>Title:</h3>
+          <input
+            id="PostTitle"
+            name="PostTitle"
+            type="text"
+            size="28"
+            maxlength="60"
+            placeholder="Title"
+          />
+          <h3>Text:</h3>
+          <textarea id="PostArea"></textarea>
+          <button id="PostButton">Post</button>
+                    <h2>Posts</h2>
+      <ul class="blog_posts" id="blogPost">
 
-        <li class="blog_post">
+        <li>
           <img src="user.png" style="border-radius: 100%; max-height: 25px;" />
           <p> posted:<p>
             <div>
@@ -140,17 +153,17 @@
 </section>
 
             </div>
-          <img src="img1.jpg" />
         </li>
 
         </ul>
+    </div>
     </div>
   </div>
   <footer>
     <div class="Container-fluid">
       <a href="#top">Home</a>
       <a href="#Gallery">Gallery</a>
-      <a href="Blog.html#top">Blog</a>
+      <a href="#Blog">Blog</a>
       <a href="Feedback   .html#top">Feedback</a>
     </div>
   </footer>
