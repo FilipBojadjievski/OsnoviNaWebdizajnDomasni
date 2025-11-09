@@ -22,7 +22,7 @@
               <li><a href="home.html#top">Home</a></li>
               <li><a href="#Gallery">Gallery</a></li>
               <li><a href="#Blog">Blog</a></li>
-              <li><a href="Feedback.html#top">Feedback</a></li>
+              <li><a href="#Feedback">Feedback</a></li>
             </ul>
           </nav>
         </div>
@@ -59,38 +59,55 @@
           <p style="display: inline;"> posted:<p>
             <h1>Grossmunster</h1>
           <img src="img1.jpg" />
-
+          <h2>Comments</h2>
           <ul id ="comments 1">
 
           </ul>
-          <h2>Comments</h2>
+
           <textarea id="Comment area 1"></textarea>
-          <button id="1">Comment</button>
+          <button id="1" class="commentButton">Comment</button>
+          <div>
+          <button id="Likes 1" onclick=like(1) class="LikeBtn">Like</button>
+          <div id="Balance 1" style="display: inline;">3</div>
+          <button id="Dislikes 1" onclick=dislike(1) class="DislikeBtn">Dislike</button>
+          </div>
         </div>
         <div class="image" id="Image 2">
                     <img src="user.png" style="border-radius: 100%; max-height: 25px;" />
           <p style="display: inline;"> posted:<p>
             <h1>Operhaus </h1>
           <img src="img2.jpeg" />
+                    <h2>Comments</h2>
           <ul id ="comments 2">
 
           </ul>
-          <h2>Comments</h2>
+
           <textarea id="Comment area 2"></textarea>
-          <button id="2">Comment</button>
+          <button id="2" class="commentButton">Comment</button>
+                    <div>
+          <button id="Likes 2" onclick=like(2) class="LikeBtn">Like</button>
+          <div id="Balance 2" style="display: inline;">-2</div>
+          <button id="Dislikes 2" onclick=dislike(2) class="DislikeBtn">Dislike</button>
+          </div>
         </div>
         <div class="image" id="Image 3">
                     <img src="user.png" style="border-radius: 100%; max-height: 25px;" />
           <p style="display: inline;"> posted:<p>
             <h1>UZH</h1>
           <img src="img3.jpg" />
+                    <h2>Comments</h2>
           <ul id ="comments 3">
 
           </ul>
-          <h2>Comments</h2>
+
 
           <textarea id="Comment area 3"></textarea>
-          <button id="3">Comment</button>
+          <button id="3" class="commentButton">Comment</button>
+                    <div>
+          <button id="Likes 3" onclick=like(3) class="LikeBtn">Like</button>
+          <div id="Balance 3" style="display: inline;">5</div>
+          <button id="Dislikes 3" onclick=dislike(3) class="DislikeBtn">Dislike</button>
+          </div>
         </div>
 
     </div>
@@ -159,12 +176,81 @@
     </div>
     </div>
   </div>
+  <div class="container-fluid pr-0 pl-0">
+    <div class="Feedback-bg">
+    <div class="Feedback" id="Feedback">
+    <h1>Feedback</h1>
+    <p>Do you have something to say about our site? Please tell us what you liked and what we can improve in the future.</p>
+    <form >
+      <ol>
+        <li>
+      Nickname:
+        <input
+            id="Nickname"
+            name="login"
+            type="text"
+            size="14"
+            maxlength="30"
+            placeholder="Nickname"
+            class="Field"
+          />
+          </li>
+          <li>
+        What was your experience with our site?
+        <select class="Field">
+          <option>
+            1
+          </option>
+                    <option>
+            2
+          </option>
+                    <option>
+            3
+          </option>
+                    <option>
+            4
+          </option>
+                    <option selected>
+            5
+          </option>
+        </select>
+        </li>
+        <li>
+        What was your favorite part of our site?
+        <input type="radio" name="favorite">Title</input>
+        <input type="radio" name="favorite">Gallery</input>
+        <input type="radio" name="favorite">Blog</input>
+        <input type="radio" name="favorite">This form</input>
+        </li>
+        <li>
+        When did you last visit Zurich.
+        <input type="date" class="Field">
+        </li>
+        <li>
+        Did our site help you on your trip?
+        <input type="radio" name="y/n">yes</input>
+        <input type="radio" name="y/n">no</input>
+        </li>
+        <li>
+          Additional Comments
+          <textarea class="Field"></textarea>
+        </li>
+        <li>
+        <input  type="checkbox" id="Checked"> <p id="Agreement" style="display: inline;"> I agree with my data being shared</p></input>
+        </li>
+        
+        <button type="button" onclick=feedback()>Submit</button>
+        </ol>
+      </form>
+      </div>
+  </div>  
+  </div>
   <footer>
     <div class="Container-fluid">
       <a href="#top">Home</a>
       <a href="#Gallery">Gallery</a>
       <a href="#Blog">Blog</a>
-      <a href="Feedback   .html#top">Feedback</a>
+      <a href="#Feedback">Feedback</a>
     </div>
   </footer>
 </body>

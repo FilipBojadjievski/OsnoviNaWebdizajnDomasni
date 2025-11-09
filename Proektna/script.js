@@ -1,6 +1,7 @@
 window.addEventListener("load", init, true);
 var ime = "User" + parseInt(Math.random() * 100000);
 var values = [3, -2, 5];
+
 function init() {
   console.log(ime);
   var but = document.getElementById("Login_button");
@@ -13,6 +14,41 @@ function init() {
   but.addEventListener("click", comment, true);
   but = document.getElementById("PostButton");
   but.addEventListener("click", post, true);
+}
+function like(tag) {
+  var value = document.getElementById("Balance " + tag.toString());
+  value.innerHTML = values[tag - 1] + 1;
+  value.setAttribute("class", "Liked");
+  var likebtn = document.getElementById("Likes " + tag.toString());
+  likebtn.setAttribute("class", "ActiveLike");
+  var dislikebtn = document.getElementById("Dislikes " + tag.toString());
+  dislikebtn.setAttribute("class", "DislikeBtn");
+}
+function dislike(tag) {
+  var value = document.getElementById("Balance " + tag.toString());
+  value.innerHTML = values[tag - 1] - 1;
+  value.setAttribute("class", "Disliked");
+  var likebtn = document.getElementById("Likes " + tag.toString());
+  likebtn.setAttribute("class", "LikeBtn");
+  var dislikebtn = document.getElementById("Dislikes " + tag.toString());
+  dislikebtn.setAttribute("class", "ActiveDislike");
+}
+function feedback() {
+  var Nickname = document.getElementById("Nickname");
+  var Message = "";
+  var agreeing = document.getElementById("Agreement");
+  var checked = document.getElementById("Checked");
+  if (checked.checked != true) {
+    agreeing.setAttribute("class", "Error");
+    return;
+  }
+  if (Nickname.value == "") {
+    Message = "Thank you for filling out this form anonimously";
+  } else {
+    Message = `Thank you ${Nickname.value} for giving us feedback`;
+  }
+  var Field = document.getElementById("Feedback");
+  Field.innerHTML = "<p>" + Message + "</p>";
 }
 function timestamp() {
   const now = new Date();
@@ -53,16 +89,12 @@ function post(event) {
   komentar.appendChild(brisi);
   nov.appendChild(komentar);
   accessedbox.value = "";
+  title.value = "";
 }
 function deletepost(event) {
   var current = event.target;
   var todel = current.parentElement.parentElement;
   todel.parentElement.removeChild(todel);
-}
-function like(event) {
-  var referenced = event.target;
-  var value = referenced.parentElement.getElementById("Val");
-  console.log(value.id);
 }
 function comment(event) {
   var referenced = event.target;

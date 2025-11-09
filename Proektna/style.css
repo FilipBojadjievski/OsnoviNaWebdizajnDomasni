@@ -62,13 +62,13 @@ header button:hover {
 .image textarea {
   width: 100%;
 }
-.image button {
+.commentButton {
   background-color: rgb(70, 65, 65);
   color: white;
   border-radius: 5%;
   margin-top: 5%;
 }
-.image button:hover {
+.commentButton:hover {
   background-color: rgb(204, 199, 199);
   color: black;
 }
@@ -227,4 +227,90 @@ nav ul li a {
 }
 nav ul li a:hover {
   color: black;
+}
+.Feedback {
+  background-color: rgb(159, 50, 50);
+  color: white;
+  max-width: 50%;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  margin-top: 10%;
+  margin-bottom: 10%;
+  border-radius: 5%;
+  padding: 3%;
+  text-align: left;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.Feedback ol li {
+  padding: 1%;
+}
+.Feedback-bg {
+  background: linear-gradient(to bottom, rgb(30, 111, 64), rgb(13, 65, 7));
+  margin-top: 0;
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+.Feedback button {
+  background-color: rgb(208, 144, 144);
+  color: white;
+}
+.Feedback button:hover {
+  background-color: rgb(152, 37, 37);
+  color: black;
+}
+.Feedback ol li textarea {
+  display: block;
+  width: 100%;
+}
+.Feedback input::placeholder {
+  color: rgb(82, 14, 14);
+}
+.Field {
+  background-color: rgb(229, 152, 152);
+  color: rgb(82, 14, 14);
+}
+.Error {
+  color: rgb(255, 230, 0);
+  display: inline;
+}
+footer div a {
+  color: rgb(125, 251, 251);
+}
+.ActiveDislike {
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+}
+.ActiveLike {
+  background-color: blue;
+  color: white;
+  border-radius: 50%;
+}
+.Liked {
+  color: blue;
+}
+.Disliked {
+  color: red;
+}
+.LikeBtn {
+  background-color: rgb(70, 65, 65);
+  color: white;
+  border-radius: 5%;
+  margin-top: 5%;
+  border-radius: 50%;
+}
+.LikeBtn:hover {
+  background-color: blue;
+}
+.DislikeBtn {
+  background-color: rgb(70, 65, 65);
+  color: white;
+  border-radius: 5%;
+  margin-top: 5%;
+  border-radius: 50%;
+}
+.DislikeBtn:hover {
+  background-color: red;
 }
