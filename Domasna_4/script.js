@@ -13,7 +13,7 @@ function filtering(text, title) {
         .children(`:nth-child(${column})`)
         .text()
         .toLowerCase()
-        .indexOf(text) > -1
+        .indexOf(text.toLowerCase()) > -1
     );
   });
 }
