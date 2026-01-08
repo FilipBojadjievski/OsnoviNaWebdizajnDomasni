@@ -1,0 +1,12 @@
+<div class="main">
+  <img class="slika" [src]="shofer?.iconUrl" />
+  <p class="par">Name:{{ shofer?.name }}</p>
+  <p>Team:{{ shofer?.team }}</p>
+  <p>
+    Points: <b>{{ shofer?.points }}</b>
+  </p>
+  <p>
+    {{ indeks }}
+  </p>
+  <button (click)="funk()">Stisni me</button>
+</div>
