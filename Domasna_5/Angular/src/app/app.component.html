@@ -1,0 +1,15 @@
+<div class="Home">
+  <img
+    class="title"
+    src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Moto_Gp_logo.svg/2560px-Moto_Gp_logo.svg.png"
+    alt="Moto Gp logo"
+  />
+  <app-vozac
+    *ngFor="let moto of vozaci; index as i; first as prv; odd as par"
+    [class.is-even]="par"
+    [class.is-first]="prv"
+    [shofer]="moto"
+    (click)="funk()"
+    [indeks]="i + 1"
+  ></app-vozac>
+</div>

@@ -1,0 +1,16 @@
+.is-even {
+  scale: 120 px;
+  color: rgb(164, 74, 74);
+}
+.is-first {
+  color: rgb(138, 211, 125);
+}
+.Home {
+  text-align: center;
+  background-color: brown;
+  margin-left: 0;
+  margin-right: 0;
+}
+.title {
+  width: 30%;
+}
